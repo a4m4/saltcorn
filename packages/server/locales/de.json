@@ -1602,5 +1602,8 @@
   "Upload language CSV": "Sprach-CSV hochladen",
   "Create an account!": "Erstellen Sie ein Konto!",
   "Login with %s": "Mit %s anmelden",
-  "Already have an account? Login!": "Bereits ein Konto? Einloggen!"
+  "Already have an account? Login!": "Bereits ein Konto? Einloggen!",
+  "Text to display": "Anzuzeigender Text",
+  "Formula?": "Formel?",
+  "Font family": "Schriftfamilie"
 }

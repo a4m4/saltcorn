@@ -262,9 +262,13 @@ const pageBuilderData = async (req, context) => {
     }
   }
 
+
   //console.log(fixed_state_fields.ListTasks);
   const icons = getState().icons;
+
+  console.log("PagEdit 2",req.getCatalog())
   return {
+    translations:  req.getCatalog() || {},
     views: views.map((v) => v.select_option),
     images,
     pages,

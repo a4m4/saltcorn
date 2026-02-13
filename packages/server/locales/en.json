@@ -1791,5 +1791,8 @@
 	"Finished translating %s strings.": "Finished translating %s strings.",
 	"This is a Share extension profile": "This is a Share extension profile",
 	"App Group ID": "App Group ID",
-	"The App Group ID is used to share data between the main app and the Share extension.": "The App Group ID is used to share data between the main app and the Share extension."
+	"The App Group ID is used to share data between the main app and the Share extension.": "The App Group ID is used to share data between the main app and the Share extension.",
+	"Text to display": "Text to display",
+	"Formula?": "Formula? eng",
+	"Font family": "Font change"
 }

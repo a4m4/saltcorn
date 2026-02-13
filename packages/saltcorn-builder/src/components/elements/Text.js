@@ -27,6 +27,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import fas from "@fortawesome/free-solid-svg-icons";
 import far from "@fortawesome/free-regular-svg-icons";
 import { SingleLineEditor } from "./MonacoEditor";
+import useTranslation from "../../hooks/useTranslation";
+
 const ckConfig = {
   toolbarGroups: [
     { name: "document", groups: ["mode", "document", "doctools"] },
@@ -155,6 +157,7 @@ export /**
  * @subcategory components
  */
 const TextSettings = () => {
+  const { t } = useTranslation();
   const node = useNode((node) => ({
     id: node.id,
     text: node.data.props.text,
@@ -185,6 +188,8 @@ const TextSettings = () => {
   const setAProp = setAPropGen(setProp);
   const allowFormula = mode === "show" || mode === "list";
 
+  console.log("translation",t("Formula?"))
+
   return (
     <div>
       {allowFormula && (
@@ -199,10 +204,10 @@ const TextSettings = () => {
               setProp((prop) => (prop.isFormula.text = checked));
             }}
           />
-          <label className="form-check-label">Formula?</label>
+          <label className="form-check-label">{t("Formula?")}</label>
         </div>
       )}
-      <label>Text to display</label>
+      <label>{t("Text to display")}</label>
       {allowFormula && isFormula.text ? (
         <SingleLineEditor setProp={setProp} value={text} propKey="text" />
       ) : (
@@ -260,7 +265,7 @@ const TextSettings = () => {
           <SettingsRow
             field={{
               name: "font",
-              label: "Font family",
+              label: t("Font family"),
               type: "Font",
             }}
             node={node}
