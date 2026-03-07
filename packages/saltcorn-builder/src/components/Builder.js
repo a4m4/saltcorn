@@ -517,11 +517,9 @@ const SettingsPanel = ({ isEnlarged, setIsEnlarged }) => {
                 {t("Clone")}
               </button>
             )}
-            {hasPromptNodes && (
-              <div className="mt-2">
-                {selected.settings && React.createElement(selected.settings)}
-              </div>
-            )}
+            <div className="mt-2">
+              {selected.settings && React.createElement(selected.settings)}
+            </div>            
           </Fragment>
         ) : (
           t("No element selected")
